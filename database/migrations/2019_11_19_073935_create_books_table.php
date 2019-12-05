@@ -18,7 +18,6 @@ class CreateBooksTable extends Migration
              $table->string('name', 50);
              $table->integer('price');
              $table->string('author', 50)->nullable();
-             $table->string('explain')->nullable();
              $table->timestamps();
         });
     }
