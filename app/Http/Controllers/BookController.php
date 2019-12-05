@@ -40,6 +40,7 @@ class BookController extends Controller
         $book->name = $request->name;
         $book->price = $request->price;
         $book->author = $request->author;
+        $book->explain = $request->explain;
         $book->save();
 
         return redirect("/book");
@@ -66,6 +67,7 @@ class BookController extends Controller
         $book->name = $request->name;
         $book->price = $request->price;
         $book->author = $request->author;
+        $book->explain = $request->explain;
         $book->save();
 
         return redirect("/book");
