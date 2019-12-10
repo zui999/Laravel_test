@@ -12,3 +12,4 @@
 */
 
 Route::resource('book', 'BookController');
+Route::resource('shop', 'ShopController');
