@@ -11,9 +11,6 @@ class BooksTableSeeder extends Seeder
      */
     public function run()
     {
-        //
-        // テーブルのクリア
-       DB::table('books')->truncate();
 
         // 初期データ用意（列名をキーとする連想配列）
         $books = [
