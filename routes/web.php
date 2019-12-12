@@ -12,3 +12,5 @@
 */
 
 Route::resource('book', 'BookController');
+
+Route::get('shop', 'ShopController@index')->name('shop.index');
