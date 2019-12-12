@@ -15,7 +15,7 @@ class CreateShopCartsTable extends Migration
     {
         Schema::create('shop_carts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('number')->nullable();
+            $table->integer('user_name')->nullable();
             $table->timestamps();
         });
     }
