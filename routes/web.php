@@ -12,4 +12,9 @@
 */
 
 Route::resource('book', 'BookController');
-Route::resource('shop', 'ShopController');
+
+Route::get('shop', 'ShopController@index')->name('shop.index');
+
+Route::get('shopcart', 'ShopCartController@index')->name('shopcart.index');
+
+Route::post('bookToCart/{id}', 'AddToCartController@addToCart')->name('shopcart.addToCart');

@@ -18,15 +18,13 @@
       </tr>
       @foreach($books as $book)
       <tr>
-        <td>
-          <a href="">{{ $book->id }}</a>
-        </td>
+        <td>{{ $book->id }}</td>
         <td>{{ $book->name }}</td>
         <td>{{ $book->price }}</td>
         <td>{{ $book->author }}</td>
         <td>
-          <form action="shopcart/{{ $book->id }}" method="post">
-            <input type="hidden" name="_method" value="addToCart">
+          <form action="bookToCart/{{ $book->id }}" method="post">
+            <input type="hidden" name="_method" value="POST">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <button type="submit" class="" aria-label="Left Align"><span class="glyphicon glyphicon-shopping-cart"></span></button>
           </form>
