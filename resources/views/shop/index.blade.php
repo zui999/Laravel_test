@@ -23,7 +23,7 @@
         <td>{{ $book->price }}</td>
         <td>{{ $book->author }}</td>
         <td>
-          <form action="bookToCart/{{ $book->id }}" method="post">
+          <form action="addToCart/{{ $book->id }}" method="post">
             <input type="hidden" name="_method" value="POST">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <button type="submit" class="" aria-label="Left Align"><span class="glyphicon glyphicon-shopping-cart"></span></button>
