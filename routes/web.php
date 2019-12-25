@@ -14,3 +14,9 @@
 Route::resource('book', 'BookController');
 
 Route::get('shop', 'ShopController@index')->name('shop.index');
+
+Route::get('shopcart', 'ShopCartController@index')->name('shopcart.index');
+
+Route::delete('deleteFromCart/{id}', 'ShopCartController@deleteFromCart')->name('shopcart.destroy');
+
+Route::post('addToCart/{id}', 'ShopCartController@addToCart')->name('shopcart.addToCart');
